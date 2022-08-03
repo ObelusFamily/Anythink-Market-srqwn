@@ -148,7 +148,7 @@ router.post("/", auth.required, function(req, res, next) {
 
       item.seller = user;
 
-      if(item.image === "") {
+      if(item.image.length < 2) {
         item.image = "/placeholder.png";
       }
 
